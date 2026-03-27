@@ -7,8 +7,7 @@
 
     /* ---------- Configuration ---------- */
 
-    /* Replace this with your actual n8n webhook URL */
-    const WEBHOOK_URL = "https://your-n8n-domain/webhook/daily-news-subscribe";
+    const WEBHOOK_URL = "https://hotbotst.app.n8n.cloud/webhook/daily-news-subscribe";
 
 
     /* ---------- DOM Elements ---------- */
