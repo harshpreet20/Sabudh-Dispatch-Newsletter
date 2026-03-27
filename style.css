@@ -1,0 +1,427 @@
+/* ============================================
+   THE SABUDH DISPATCH — Design System
+   ============================================ */
+
+:root {
+
+    --bg-primary: #0a0a0f;
+    --bg-card: #151520;
+
+    --text-primary: #f0ece2;
+    --text-secondary: #a8a4a0;
+    --text-muted: #6b6763;
+
+    --accent: #d4a853;
+
+    --success: #4ade80;
+    --error: #f87171;
+
+    --border: rgba(255, 255, 255, 0.06);
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-gothic: 'UnifrakturMaguntia', cursive;
+
+    --radius: 12px;
+
+}
+
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family: var(--font-sans);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/* ---------- Layout ---------- */
+
+.main-container {
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+
+    text-align: center;
+
+}
+
+.masthead-title {
+
+    font-family: var(--font-gothic);
+    font-size: 48px;
+
+    letter-spacing: 2px;
+
+}
+
+.masthead-tagline {
+
+    font-family: var(--font-serif);
+    font-style: italic;
+
+    color: var(--text-secondary);
+
+    margin-top: 6px;
+
+}
+
+.masthead-meta {
+
+    margin-top: 10px;
+
+    font-size: 12px;
+    color: var(--text-muted);
+
+}
+
+.masthead-sep {
+
+    margin: 0 6px;
+    color: var(--accent);
+
+}
+
+.masthead-rule {
+
+    height: 2px;
+
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+
+    margin: 12px 0;
+
+}
+
+
+/* ---------- Card ---------- */
+
+.subscription-card,
+.success-card {
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 28px;
+
+}
+
+
+/* ---------- Card Header ---------- */
+
+.card-title {
+
+    font-family: var(--font-serif);
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+
+}
+
+.card-subtitle {
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ---------- Form ---------- */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+.form-label {
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 6px;
+
+    display: block;
+
+}
+
+.form-input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+
+    background: #111;
+
+    color: var(--text-primary);
+
+    font-size: 14px;
+
+}
+
+.form-input::placeholder {
+
+    color: var(--text-muted);
+
+}
+
+.form-textarea {
+
+    resize: vertical;
+
+}
+
+
+/* ---------- Topics ---------- */
+
+.topics-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+.topic-chip {
+
+    background: #111;
+
+    border: 1px solid var(--border);
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    color: var(--text-secondary);
+
+    transition: all .25s;
+
+}
+
+.topic-chip:hover {
+
+    border-color: var(--accent);
+
+}
+
+.topic-chip.selected {
+
+    background: rgba(212, 168, 83, .15);
+
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+}
+
+
+/* ---------- Button ---------- */
+
+.submit-btn {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, var(--accent), #c49a3a);
+
+    color: #111;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .2s;
+
+}
+
+.submit-btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ---------- Success ---------- */
+
+.success-card {
+
+    display: none;
+
+    text-align: center;
+
+}
+
+.success-card.visible {
+
+    display: block;
+
+}
+
+.success-title {
+
+    font-family: var(--font-serif);
+
+    font-size: 26px;
+
+    margin-bottom: 8px;
+
+}
+
+.success-message {
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 18px;
+
+}
+
+.success-topics {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    justify-content: center;
+
+}
+
+.success-topic-tag {
+
+    background: rgba(74, 222, 128, .15);
+
+    border: 1px solid rgba(74, 222, 128, .3);
+
+    color: var(--success);
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+}
+
+
+/* ---------- Reset Button ---------- */
+
+.reset-btn {
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+
+    background: #111;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: var(--text-muted);
+
+    margin-top: 20px;
+
+}
+
+.footer-small {
+
+    margin-top: 4px;
+
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:480px) {
+
+    .masthead-title {
+
+        font-size: 36px;
+
+    }
+
+    .topics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

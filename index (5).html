@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Subscribe to personalized daily news updates delivered straight to your inbox, curated by topic and formatted as an interactive newspaper.">
+
+    <title>The Sabudh Dispatch — Personalized News Subscription</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="bg-particles" id="bgParticles"></div>
+
+    <main class="main-container">
+
+        <header class="masthead">
+
+            <div class="masthead-rule"></div>
+
+            <p class="masthead-edition">Est. 2026 · Digital Edition</p>
+
+            <h1 class="masthead-title">The Sabudh Dispatch</h1>
+
+            <p class="masthead-tagline">
+                Your Personalized News, Delivered Every Morning
+            </p>
+
+            <div class="masthead-rule"></div>
+
+            <div class="masthead-meta">
+
+                <span id="currentDate"></span>
+
+                <span class="masthead-sep">•</span>
+
+                <span>Free Subscription</span>
+
+                <span class="masthead-sep">•</span>
+
+                <span>AI-Curated</span>
+
+            </div>
+
+        </header>
+
+
+        <section class="subscription-card" id="subscriptionCard">
+
+            <div class="card-inner">
+
+                <div class="card-header">
+
+                    <h2 class="card-title">
+                        Subscribe to Your Daily Briefing
+                    </h2>
+
+                    <p class="card-subtitle">
+                        Select your interests and we'll deliver a curated newspaper
+                        to your inbox every morning at 8:00 AM.
+                    </p>
+
+                </div>
+
+
+                <form id="subscriptionForm">
+
+                    <div class="form-group" id="nameGroup">
+
+                        <label class="form-label">
+                            Full Name
+                        </label>
+
+                        <input type="text" id="nameInput" class="form-input" placeholder="e.g. Harshpreet Singh"
+                            required>
+
+                        <span class="form-error">
+                            Please enter your name
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group" id="emailGroup">
+
+                        <label class="form-label">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="emailInput" class="form-input" placeholder="you@example.com" required>
+
+                        <span class="form-error">
+                            Please enter a valid email address
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group" id="topicsGroup">
+
+                        <label class="form-label">
+                            News Topics of Interest
+                        </label>
+
+                        <p class="topics-hint">
+                            Select at least one topic
+                        </p>
+
+                        <div class="topics-grid" id="topicsGrid">
+
+                            <button type="button" class="topic-chip" data-topic="AI">🤖 AI</button>
+
+                            <button type="button" class="topic-chip" data-topic="Technology">💻 Technology</button>
+
+                            <button type="button" class="topic-chip" data-topic="Business">📈 Business</button>
+
+                            <button type="button" class="topic-chip" data-topic="Sports">⚽ Sports</button>
+
+                            <button type="button" class="topic-chip" data-topic="Science">🔬 Science</button>
+
+                            <button type="button" class="topic-chip" data-topic="Health">🏥 Health</button>
+
+                            <button type="button" class="topic-chip" data-topic="Entertainment">🎬
+                                Entertainment</button>
+
+                            <button type="button" class="topic-chip" data-topic="World">🌍 World</button>
+
+                        </div>
+
+                        <span class="form-error">
+                            Please select at least one topic
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label class="form-label">
+                            Custom Interests (Optional)
+                        </label>
+
+                        <textarea id="customInput" class="form-input form-textarea"
+                            placeholder="e.g. Elon Musk, Indian startups, Formula 1" rows="3"></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+
+                        <span class="btn-text">
+                            Start My Subscription
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <section class="success-card" id="successCard">
+
+            <div class="card-inner">
+
+                <h2 class="success-title">
+                    Welcome Aboard!
+                </h2>
+
+                <p class="success-message">
+
+                    Your subscription is confirmed,
+                    <strong id="successName"></strong>.
+
+                    Expect your first edition of
+                    <em>The Sabudh Dispatch</em>
+                    tomorrow morning at
+                    <strong>8:00 AM</strong>.
+
+                </p>
+
+                <div id="successTopics" class="success-topics"></div>
+
+                <button class="reset-btn" id="resetBtn">
+                    Subscribe Another Person
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <p>
+                Powered by <strong>n8n Automation</strong>
+            </p>
+
+            <p class="footer-small">
+                © 2026 The Sabudh Dispatch. Workshop Coursework Project By Harshpreet - Hotbot Studios.
+            </p>
+
+        </footer>
+
+
+    </main>
+
+    <script src="sabudh_dispatch_script.js"></script>
+
+</body>
+
+</html>
