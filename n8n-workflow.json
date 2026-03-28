@@ -53,39 +53,27 @@
     },
     {
       "parameters": {
-        "operation": "append",
-        "documentId": {
+        "resource": "row",
+        "operation": "insert",
+        "dataTableId": {
           "__rl": true,
-          "value": "1bdbE243jE6uKnuKmcGNKqHkyO0A2o-fUadh2-7iUvbw",
-          "mode": "list",
-          "cachedResultName": "Sabudh Project",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bdbE243jE6uKnuKmcGNKqHkyO0A2o-fUadh2-7iUvbw/edit?usp=drivesdk"
+          "mode": "name",
+          "value": "Subscribers"
         },
-        "sheetName": "Subscribers",
         "columns": {
           "mappingMode": "autoMapInputData",
-          "value": {},
-          "matchingColumns": [],
-          "schema": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          "value": {}
         },
         "options": {}
       },
       "id": "65aa281a-5127-4220-a85f-785472a91d39",
-      "name": "Save to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4,
+      "name": "Save Subscriber",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
       "position": [
         864,
         -208
-      ],
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "4vqwVAYRtJRhuOJx",
-          "name": "Google Sheets account"
-        }
-      }
+      ]
     },
     {
       "parameters": {
@@ -124,30 +112,24 @@
     },
     {
       "parameters": {
-        "documentId": {
+        "resource": "row",
+        "operation": "get",
+        "dataTableId": {
           "__rl": true,
-          "value": "1bdbE243jE6uKnuKmcGNKqHkyO0A2o-fUadh2-7iUvbw",
-          "mode": "list",
-          "cachedResultName": "Sabudh Project",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bdbE243jE6uKnuKmcGNKqHkyO0A2o-fUadh2-7iUvbw/edit?usp=drivesdk"
+          "mode": "name",
+          "value": "Subscribers"
         },
-        "sheetName": "Subscribers",
+        "returnAll": true,
         "options": {}
       },
       "id": "6a30c7b7-b22c-4acf-b7c1-5cc8561054d5",
       "name": "Get Subscribers",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4,
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
       "position": [
         640,
         144
-      ],
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "4vqwVAYRtJRhuOJx",
-          "name": "Google Sheets account"
-        }
-      }
+      ]
     },
     {
       "parameters": {
@@ -347,14 +329,14 @@
       "main": [
         [
           {
-            "node": "Save to Google Sheets",
+            "node": "Save Subscriber",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Save to Google Sheets": {
+    "Save Subscriber": {
       "main": [
         [
           {
@@ -492,9 +474,8 @@
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate",
-    "availableInMCP": false
+    "availableInMCP": true
   },
-  "versionId": "6b591cad-4f33-442d-af7a-e8da76fbad28",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "dd012e7fb156ffcc67217f2a2ec1cf618acc375fa4aa5f7a4326e2e7c95f978d"
