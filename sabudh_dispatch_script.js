@@ -7,7 +7,7 @@
 
     /* ---------- Configuration ---------- */
 
-    const WEBHOOK_URL = "https://hotbotst.app.n8n.cloud/webhook/daily-news-subscribe";
+    const WEBHOOK_URL = "https://hotbotst.app.n8n.cloud/webhook/daily-news-subscribe-sabudh-dispatch";
 
 
     /* ---------- DOM Elements ---------- */
