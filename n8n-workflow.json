@@ -4,7 +4,7 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "News_Form",
+        "path": "daily-news-subscribe-sabudh-dispatch",
         "responseMode": "responseNode",
         "options": {}
       },
